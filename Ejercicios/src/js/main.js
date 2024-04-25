@@ -23,7 +23,7 @@ console.group("Ejercicio 3")
 // 3. Utiliza un foreach para recorrer el array frutas e imprimir cada fruta en mayúscula en la consola.
 frutas.forEach(fruta => {
     console.log(fruta.toUpperCase())
-} )
+})
 console.groupEnd()
 
 console.group("Ejercicio 4")
@@ -89,6 +89,7 @@ console.groupEnd()
 console.groupCollapsed("Ejercicio 13")
 // 13. Utiliza el método forEach para imprimir cada fruta pero convertida a array.
 frutas.forEach
+console.groupEnd()
 // 14. Utiliza un bucle for of para imprimir cada número del array numeros en la consola.
 // 15. Crea un nuevo array llamado duplicados que contenga el doble de cada número en el array
 // numeros utilizando el método map.
@@ -103,9 +104,30 @@ frutas.forEach
 // 21. Crea un array llamado precios que contenga al menos 3 números (precios de productos).
 // 22. Utiliza el método map para crear un nuevo array llamado preciosConIVA que contenga los
 // precios con un 21% de IVA aplicado a cada uno.
+console.group("Ejercicio 23")
 // 23. Crea un array llamado duplicados que contenga algunos números duplicados.
-// 24. Elimina los elementos duplicados del array duplicados y muestra el nuevo array sin
-// duplicados en la consola.
+let duplicados = [1, 1, 2, 2, 2, 3, 3, 4, 4, 3, 5, 5, 6]
+console.log(duplicados)
+console.groupEnd()
+
+console.group("Ejercicio 24")
+// 24. Elimina los elementos duplicados del array duplicados y muestra el nuevo array sin duplicados en la consola.
+let arraySinDuplicados = []
+
+for (let i = 0; i < duplicados.length; i++) {
+    let duplicado = false
+    for (let j = 0; j < arraySinDuplicados.length; j++) {
+        if (duplicados[i] === arraySinDuplicados[j]) {
+            duplicado = true
+            break
+        }
+    }
+    if (!duplicado) {
+        arraySinDuplicados.push(duplicados[i])
+    }
+}
+
+console.log(arraySinDuplicados)
 // 25. Crea dos arrays llamados array1 y array2, cada uno con al menos 3 nombres.26. Concatena los dos arrays en uno nuevo llamado concatenado y muestra el resultado en la
 // consola.
 // 27. Crea un array llamado colores que contenga al menos 5 colores diferentes.
